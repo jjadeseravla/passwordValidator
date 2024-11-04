@@ -17,7 +17,11 @@ describe('is password valid', () => {
     expect(isPasswordValid('Abvdefhigjsd')).toBe(false);
   });
 
-  it('has more than 8 chars, contains lower,capital letter and numer', () => {
-    expect(isPasswordValid('Abcdefgh9')).toBe(true);
-  })
+  it('has more than 8 chars, contains lower,capital letter and number', () => {
+    expect(isPasswordValid('Abcdefgh9')).toBe(false);
+  });
+
+  it('has more than 8 chars, contains lower,capital letter, number and underscore', () => {
+    expect(isPasswordValid('Abcde_fgh9')).toBe(true);
+  });
 })
