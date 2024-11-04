@@ -11,5 +11,9 @@ describe('is password valid', () => {
 
   it('has more than 8 chars and a capital letter', () => {
     expect(isPasswordValid('Abcdefghij')).toBe(true);
+  });
+
+  it('also has a lower letter', () => {
+    expect(isPasswordValid('Abvdefhigjsd')).toBe(true);
   })
 })
