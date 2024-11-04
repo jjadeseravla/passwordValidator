@@ -5,8 +5,12 @@ const isPasswordValid = (input) => {
   const hasCapitalLetter = /[A-Z]/.test(input);
   const hasLowerCaseLetter = /[a-z]/.test(input);
   const hasMinLength = input.length >= minNumChars;
+  const hasNumber = /[1-9]/.test(input);
 
-  return hasCapitalLetter && hasLowerCaseLetter && hasMinLength;
+  return hasCapitalLetter &&
+    hasLowerCaseLetter &&
+    hasMinLength &&
+    hasNumber;
 }
 
 const input = 'abcdefghijklmno';
